@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ user.username }}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library manage menet system</title>
+    <h1>welcomne to Library management system</h1>
+    <p><a href="{% url 'registration' %}">Register</a></p>
+    <p><a href="{% url 'login' %}">Login</a></p>
+    <p><a href="{% url 'logout' %}">logout</a></p>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+
+</head>
+<body>
+    
+</body>
+</html>
